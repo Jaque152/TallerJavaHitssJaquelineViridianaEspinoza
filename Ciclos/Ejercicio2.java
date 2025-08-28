@@ -33,7 +33,7 @@ public class Ejercicio2 {
                 menorNumero = numero;
             }
         }
-        
+        sc.close();
         System.out.println("El número menor es: " + menorNumero);
         
         // Verificar si el menor número es menor que 10 o no
@@ -43,7 +43,7 @@ public class Ejercicio2 {
             System.out.println("El número es mayor o igual que 10");
         }
         
-        sc.close();
+        
     }    
 }
 
