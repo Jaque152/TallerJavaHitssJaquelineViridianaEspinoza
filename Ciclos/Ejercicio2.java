@@ -19,6 +19,7 @@ public class Ejercicio2 {
         // Asegurarse de que la cantidad sea al menos 10
         if (cantidad < 10) {
             System.out.println("La cantidad debe ser al menos 10.");
+            sc.close();
             return;
         }
         
