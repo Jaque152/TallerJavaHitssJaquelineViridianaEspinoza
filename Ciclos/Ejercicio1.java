@@ -9,25 +9,32 @@ import java.util.Scanner;
 public class Ejercicio1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el primer número entero:");
+        System.out.print("Ingrese el primer número entero: ");
         int num1 = sc.nextInt();
-        System.out.println("Ingrese el segundo número entero:");
+        System.out.print("Ingrese el segundo número entero: "); 
         int num2 = sc.nextInt();
         int resultado = 0;
-        // SI SON NUMEROS NEGATIVOS 
-
-        for (int i =0; i<num2; i++){
-            if(num1 <0 && num2 <0){
+        //Cuando un número es negativo y el otro positivo
+        
+        if(num2<0 && num1<0){
+            num1 = -num1;
+            num2 = -num2;
+            for(int i =0; i<num2; i++){
                 resultado += num1;
-                System.out.println("Multiplicando: " + num1 + " por " + (i + 1) + " = " + resultado);
+            } 
+        }
+        //Cuando ambos números son negativos
+        else if(num2<0 || num1<0){
+            resultado = -resultado;
+            for(int i =0; i<num2; i++){
+                resultado += num1;
             }
-            
-            
-        }   
+        }
+        else for(int i =0; i<num2; i++){
+                resultado += num1;
+            } 
         System.out.println("El resultado de la multiplicación es: " + resultado);
         sc.close();
-
-    
-        
     }
+          
 }
